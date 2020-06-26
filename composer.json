@@ -1,0 +1,27 @@
+{
+  "name": "espertomagento/deleteorder",
+  "description": "Magento 2 module for deleting orders.",
+  "type": "magento2-module",
+  "version": "1.0.0",
+  "license": [
+    "OSL-3.0",
+    "AFL-3.0"
+  ],
+  "require": {
+    "php": ">=5.5"
+  },
+  "authors": [
+    {
+      "name": "IndieSoft di Daniele Crupi"
+    },
+    {
+      "name": "Daniele Crupi"
+    }
+  ],
+  "autoload": {
+    "files": [ "registration.php" ],
+    "psr-4": {
+      "EspertoMagento\\Deleteorder\\": ""
+    }
+  }
+}
