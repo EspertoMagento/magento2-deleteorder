@@ -45,7 +45,7 @@ class MassDelete extends Action
                 $collection = $this->filter->getCollection($this->getOrderCollection());
                 $countRemovedOrder = $this->remove->remove($collection);
                 $countNonRemovedOrder = $collection->count() - $countRemovedOrder;
-                if ($countRemovedOrder == 0 || $countNonRemovedOrder != $countRemovedOrder) {
+                if ($countRemovedOrder == 0 || $countNonRemovedOrder > 0) {
                     $mod_setting_url = "Please check delete order <a href='".$this->getUrl('adminhtml/system_config/edit/section/deleteorder/', $paramsHere = ['_current'=>true])."'>configuration.</a>";
                     $this->messageManager->addError(__('Some order(s) could not be deleted. Only selected order status can be deleted. '.$mod_setting_url));
                 }
